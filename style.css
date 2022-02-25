@@ -1,0 +1,143 @@
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*for paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%); /*for background, headings, buttons*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.outer-shell {
+  display: flex;
+  width: 57.5625rem;
+  height: 31.25rem;
+  flex-wrap: wrap;
+
+  /* margin: 10.6875rem 8.0625rem 16.25rem 16.25rem; */
+}
+.sedans-shell,
+.suvs-shell,
+.luxury-shell {
+  width: 19.1875rem;
+  height: 31.25rem;
+}
+.sedans-shell {
+  background: var(--bright-orange);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.suvs-shell {
+  background: var(--dark-cyan);
+}
+.luxury-shell {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+img {
+  margin-top: 2.9375rem;
+  margin-left: 2.9375rem;
+}
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin: 2.5rem auto auto 2.9375rem;
+}
+p {
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+  width: 208px;
+  color: var(--transparent-white);
+  margin: 2.5rem 0 0 2.9375rem;
+}
+a {
+  display: inline-block;
+}
+.sedans-shell a,
+.suvs-shell a,
+.luxury-shell a {
+  padding: 0.95rem 1.9rem 0.95rem 1.9rem;
+  border-radius: 2.5rem;
+  background-color: var(--very-light-gray);
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 5rem auto 0 2.9375rem;
+}
+.sedans-shell a {
+  color: var(--bright-orange);
+}
+.sedans-shell a:hover {
+  background: var(--bright-orange);
+  border: 2px solid var(--very-light-gray);
+  color: var(--very-light-gray);
+}
+.suvs-shell a {
+  color: var(--dark-cyan);
+}
+.suvs-shell a:hover {
+  background: var(--dark-cyan);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+.luxury-shell a {
+  color: var(--very-dark-cyan);
+}
+.luxury-shell a:hover {
+  background: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+@media (max-width: 768px) {
+  body {
+    height: auto;
+  }
+  .outer-shell {
+    margin: 5.5rem 1.5rem 5.5rem 1.5rem;
+    max-width: 20.5rem;
+    min-height: 82.9375;
+  }
+  .sedans-shell,
+  .suvs-shell,
+  .luxury-shell {
+    text-align: left;
+    height: 29rem;
+  }
+  .sedans-shell {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .luxury-shell {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .sedans-shell a,
+  .suvs-shell a,
+  .luxury-shell a {
+    margin-top: 2rem;
+    position: relative;
+    top: 0.5rem;
+  }
+  p {
+    width: 14.0625rem;
+  }
+  .attribution {
+    position: relative;
+  }
+}
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+/* If it goes wrong, try with inline-block property */ ;
